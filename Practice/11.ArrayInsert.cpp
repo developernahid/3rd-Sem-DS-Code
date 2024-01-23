@@ -22,12 +22,17 @@ int main(){
     cin>>pos;
     cout<<"Enter Value:";
     cin>>value;
+    if (pos<0 || pos>n)
+    {
+        cout<<"Invalid"<<endl;
+    }
+    else{
     // for (int i = n-1; i>=pos; i--){
     // ar[i+1]=ar[i];
     // }
     ar[n]=ar[pos];
     ar[pos]=value;
-    
+    }
     n++;
     cout<<"After insert value:";
     PrintArray(ar,n);
