@@ -9,7 +9,7 @@ void PrintArray(int ar[], int n){
     cout<<endl;
 }
 int main(){
-    int n;
+    int n,count=0;
     cout<<"Enter size: ";
     cin>>n;
     int ar[n];
@@ -28,10 +28,12 @@ int main(){
             if (ar[j+1]>ar[j])
             {
                 swap(ar[j+1],ar[j]);
+                count++;
             }
             
         }
     }
+    cout<<"Swap= "<<count<<endl;
     cout<<"After Sort(Descending): ";
     PrintArray(ar,n);
 

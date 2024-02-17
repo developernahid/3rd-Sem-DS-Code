@@ -9,7 +9,7 @@ void PrintArray(int ar[], int n){
     cout<<endl;
 }
 int main(){
-    int n;
+    int n,count=0;
     cout<<"Enter size: ";
     cin>>n;
     int ar[n];
@@ -19,16 +19,20 @@ int main(){
     }
     //Implement insertion sort
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {   int key=ar[i];
         int j = i-1;
         while (j >= 0 && ar[j] < key) {
             ar[j + 1] = ar[j];
+            count++;
             j--;
         }
         ar[j+1]=key;
+        
     }
-    cout<<"After sort: ";
+    cout<<"Applying Insertion Sort:\n";
+    cout<<"No. Of swap: "<<count<<endl;
+    cout<<"Array (Descending Order): ";
     PrintArray(ar,n);
 
 }
